@@ -20,6 +20,7 @@ export class Filter extends BaseFilter<Params> {
   private dicts: string[] = [];
 
   private makeCache(): void {
+    // the algorithm is inherited from https://github.com/matsui54/ddc-dictionary under the MIT License
     if (!this.dicts) {
       return;
     }
