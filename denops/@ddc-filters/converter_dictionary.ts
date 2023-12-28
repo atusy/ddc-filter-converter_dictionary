@@ -66,7 +66,7 @@ export class Filter extends BaseFilter<Params> {
     const maxIndex = args.filterParams.maxItems - 1;
     return Promise.resolve(args.items.map((item, index) => {
       const info = item.info ?? "";
-      if (info == "" || index > maxIndex) {
+      if (info !== "" || index > maxIndex) {
         return item;
       }
       for (const dict of this.dicts) {
